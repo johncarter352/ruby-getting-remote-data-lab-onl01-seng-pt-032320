@@ -4,14 +4,14 @@ require 'json'
 
 class GetRequester
   
-  #URL = 'https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json'
+  URL = 'https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json'
  
  def initialize(url)
-   url = 'https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json'
+   url = URL
  end
  
  def get_response_body
-  uri = URI.parse(url)
+  uri = URI.parse(URL)
   response = Net::HTTP.get_response(uri)
   response.body
  end
